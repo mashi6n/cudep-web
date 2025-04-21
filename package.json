@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "build:scripts": "tsc -p tsconfig.scripts.json",
-    "run:scrape": "npm run build:scripts && node dist/scripts/exportJson.js"
+    "run:scrape": "npm run build:scripts && node dist/scripts/exportJson.js public/"
   },
   "dependencies": {
     "@types/jsdom": "^21.1.7",
