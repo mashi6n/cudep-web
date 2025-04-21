@@ -1,0 +1,49 @@
+import CudaV from '../src/models/CudaV.js';
+import DriverV from '../src/models/DriverV.js';
+import CudaDep from '../src/models/CudaDep.js';
+import { JSDOM } from "jsdom";
+
+async function ScrapeCuda(): Promise<CudaDep[]> {
+    const cudaDeps: CudaDep[] = [];
+    const seenCuda = new Set<string>();
+
+    const url = "https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html";
+    const dom = await JSDOM.fromURL(url);
+    const doc = dom.window.document;
+    const tables = doc.querySelectorAll("#id6");
+
+    tables.forEach((table) => {
+        const cap = table.querySelector(".caption");
+        if (!(cap && cap.textContent && cap.textContent.includes("CUDA Toolkit and Corresponding Driver Versions"))) {
+            return;
+        }
+        const rows = table.querySelectorAll("tbody tr");
+        rows.forEach((row) => {
+            const cudaDep = parseRow(row);
+            if (cudaDep && !seenCuda.has(cudaDep.cuda.toString())) {
+                cudaDeps.push(cudaDep);
+                seenCuda.add(cudaDep.cuda.toString());
+            }
+        })
+    })
+    return cudaDeps;
+}
+
+function parseRow(row: Element): CudaDep | null {
+    const cells = row.querySelectorAll("td");
+    let cuda = cells[0].textContent?.trim() ?? "";
+    let minLinuxDriver = cells[1].textContent?.trim() ?? "";
+    let minWindowsDriver = cells[2].textContent?.trim() ?? "";
+    if(cuda === "") {
+        return null;
+    }
+    const verStr = cuda.match(/CUDA\s+(\d+\.\d+)/);
+    if (!verStr) {
+        return null;
+    }
+    cuda = (verStr.length > 1) ? String(verStr[1]) : "0.0";
+    minLinuxDriver = minLinuxDriver.replace(">=", "").trim();
+    minWindowsDriver = minWindowsDriver.replace(">=", "").trim();
+    return new CudaDep(new CudaV(cuda), new DriverV(minLinuxDriver), new DriverV(minWindowsDriver));
+}
+export default ScrapeCuda;

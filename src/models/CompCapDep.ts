@@ -1,5 +1,5 @@
-import CompCap  from "./CompCap";
-import CudaV from "./CudaV";
+import CompCap  from "./CompCap.js";
+import CudaV from "./CudaV.js";
 
 class CompCapDep {
     /// Compute Capability depends on CUDA version

@@ -1,5 +1,5 @@
-import CudaV from "./CudaV";
-import DriverV from "./DriverV";
+import CudaV from "./CudaV.js";
+import DriverV from "./DriverV.js";
 
 class CudaDep {
     /// CUDA version depends on driver version

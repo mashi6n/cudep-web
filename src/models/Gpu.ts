@@ -1,4 +1,4 @@
-import CompCap from "./CompCap";
+import CompCap from "./CompCap.js";
 class Gpu {
     name: string;
     cc: CompCap;
