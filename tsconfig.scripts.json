@@ -1,0 +1,12 @@
+{
+    // "extends": "./tsconfig.node.json",      // or ./tsconfig.app.json, either way noEmit gets overridden
+    "compilerOptions": {
+      "noEmit": false,                      // actually generate .js files
+      "module": "NodeNext",                 // or "esnext" if you really want ESM output
+      "outDir": "dist",             // where to put compiled JS
+      "rootDir": ".",                       // so it finds scripts/
+      "esModuleInterop": true,
+      "moduleResolution": "NodeNext"
+    },
+    "include": ["scripts/**/*.ts"]
+  }
