@@ -9,19 +9,23 @@ async function ScrapeCC(): Promise<CompCapDep[]> {
     const url = "https://docs.nvidia.com/datacenter/tesla/drivers/index.html";
     const dom = await JSDOM.fromURL(url);
     const doc = dom.window.document;
-    const tables = doc.querySelectorAll("#cuda-and-architecture-matrix-table");
-    tables.forEach((table) => {
-        const cap = table.querySelector(".caption");
-        if (!(cap && cap.textContent && cap.textContent.includes("CUDA and Architecture Matrix"))) {
-            return;
-        }
-        const rows = table.querySelectorAll("tbody tr");
-        rows.forEach((row) => {
-            const ccDepsRow = parseRow(row);
-            ccDepsRow.forEach((ccDep) => {
-                ccDeps.push(ccDep);
-            });
-        })
+    const table = doc.getElementById("cuda-and-architecture-matrix-table");
+    if (!table) {
+        console.error("Table not found");
+        return ccDeps;
+    }
+
+    const cap = table.querySelector("caption");
+    if (!(cap && cap.textContent && cap.textContent.includes("CUDA and Architecture Matrix"))) {
+        console.error("Table caption not found or does not match");
+        return ccDeps;
+    }
+    const rows = table.querySelectorAll("tbody tr");
+    rows.forEach((row) => {
+        const ccDepsRow = parseRow(row);
+        ccDepsRow.forEach((ccDep) => {
+            ccDeps.push(ccDep);
+        });
     })
     return ccDeps;
 }

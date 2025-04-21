@@ -10,21 +10,24 @@ async function ScrapeCuda(): Promise<CudaDep[]> {
     const url = "https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html";
     const dom = await JSDOM.fromURL(url);
     const doc = dom.window.document;
-    const tables = doc.querySelectorAll("#id6");
+    const table = doc.getElementById("id6");
+    if (!table) {
+        console.error("Table not found");
+        return cudaDeps;
+    }
 
-    tables.forEach((table) => {
-        const cap = table.querySelector(".caption");
-        if (!(cap && cap.textContent && cap.textContent.includes("CUDA Toolkit and Corresponding Driver Versions"))) {
-            return;
+    const cap = table.querySelector("caption");
+    if (!(cap && cap.textContent && cap.textContent.includes("CUDA Toolkit and Corresponding Driver Versions"))) {
+        console.error("Table caption not found or does not match");
+        return cudaDeps;
+    }
+    const rows = table.querySelectorAll("tbody tr");
+    rows.forEach((row) => {
+        const cudaDep = parseRow(row);
+        if (cudaDep && !seenCuda.has(cudaDep.cuda.toString())) {
+            cudaDeps.push(cudaDep);
+            seenCuda.add(cudaDep.cuda.toString());
         }
-        const rows = table.querySelectorAll("tbody tr");
-        rows.forEach((row) => {
-            const cudaDep = parseRow(row);
-            if (cudaDep && !seenCuda.has(cudaDep.cuda.toString())) {
-                cudaDeps.push(cudaDep);
-                seenCuda.add(cudaDep.cuda.toString());
-            }
-        })
     })
     return cudaDeps;
 }
