@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useEffect } from "react"
 import "./App.css"
 import FilterSortList from "./components/FilterSortList"
+import VersionInput from "./components/VersionInput"
 import DepResolver from "./models/DepResolver"
 
 function App() {
@@ -25,10 +26,13 @@ function App() {
 
   return (
     <>
-      <div>
-        {loading
-          ? <p>Loading...</p>
-          : <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} onSelect={handleSelect} />}
+      <div className="grid md:grid-cols-2 gap-4 p-4">
+        <div>
+          {loading
+            ? <p>Loading...</p>
+            : <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} onSelect={handleSelect} />}
+        </div>
+        <VersionInput onChange={(item) => console.log("Number input changed:", item)} />
       </div>
     </>
   )

@@ -28,6 +28,7 @@ export default function FilterSortList({ items, onSelect }: FilterSortListProps)
     console.log("Sorted Items:", _sortedItems)
     return _sortedItems
   }, [items, query])
+
   const handleSelect = (item: string) => {
     if (item === selected) {
       setSelected(null)
