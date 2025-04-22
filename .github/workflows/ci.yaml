@@ -19,7 +19,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 10
-      - name: install dependencies
+      - name: Install dependencies
         run: pnpm i --frozen-lockfile
       - name: Check format
         run: pnpm fmt:check
