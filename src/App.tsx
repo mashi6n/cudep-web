@@ -40,16 +40,18 @@ function App() {
       <div className="grid md:grid-cols-3 gap-4 p-4">
         <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} onSelect={handleGpuSelect} />
         <VersionInput onChange={handleVersionChange} />
-        <ul className="space-y-2">
-          {compatibleCudas.map((item) => (
-            <li
-              key={item.toString()}
-              className={`p-2 border rounded cursor-pointer`}
-            >
-              {item.toString()}
-            </li>
-          ))}
-        </ul>
+        <div className="p-4 max-w-md mx-auto">
+          <ul className="space-y-2 ">
+            {compatibleCudas.map((item) => (
+              <li
+                key={item.toString()}
+                className={`p-2 border rounded cursor-pointer`}
+              >
+                {item.toString()}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </>
   )
