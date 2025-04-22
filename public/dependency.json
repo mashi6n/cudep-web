@@ -176,27 +176,6 @@
       }
     },
     {
-      "name": "Tesla K80",
-      "cc": {
-        "major": 3,
-        "minor": 7
-      }
-    },
-    {
-      "name": "Tesla K40",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Tesla K20",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
       "name": "Tesla K10",
       "cc": {
         "major": 3,
@@ -491,20 +470,6 @@
       }
     },
     {
-      "name": "RTX A5000",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "RTX A4000",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
       "name": "RTX A3000",
       "cc": {
         "major": 8,
@@ -554,20 +519,6 @@
       }
     },
     {
-      "name": "T1000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "T600",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
       "name": "T500",
       "cc": {
         "major": 7,
@@ -610,42 +561,7 @@
       }
     },
     {
-      "name": "Quadro P5000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P4000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
       "name": "Quadro P3000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P2000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P1000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P600",
       "cc": {
         "major": 6,
         "minor": 1
@@ -1429,34 +1345,6 @@
       }
     },
     {
-      "name": "GeForce RTX 5090",
-      "cc": {
-        "major": 12,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce RTX 5080",
-      "cc": {
-        "major": 12,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce RTX 4090",
-      "cc": {
-        "major": 8,
-        "minor": 9
-      }
-    },
-    {
-      "name": "GeForce RTX 4080",
-      "cc": {
-        "major": 8,
-        "minor": 9
-      }
-    },
-    {
       "name": "GeForce RTX 4070",
       "cc": {
         "major": 8,
@@ -1475,34 +1363,6 @@
       "cc": {
         "major": 8,
         "minor": 9
-      }
-    },
-    {
-      "name": "GeForce RTX 3080 Ti",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "GeForce RTX 3080",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "GeForce RTX 3070 Ti",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "GeForce RTX 3070",
-      "cc": {
-        "major": 8,
-        "minor": 6
       }
     },
     {
@@ -1531,55 +1391,6 @@
       "cc": {
         "major": 8,
         "minor": 6
-      }
-    },
-    {
-      "name": "Geforce RTX 2080",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Geforce RTX 2070",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Geforce RTX 2060",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GTX 1080",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1070",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1060",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 980",
-      "cc": {
-        "major": 5,
-        "minor": 2
       }
     },
     {
@@ -1856,13 +1667,6 @@
       }
     },
     {
-      "name": "GeForce GT 730M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
       "name": "GeForce GT 630M",
       "cc": {
         "major": 2,
@@ -2028,13 +1832,6 @@
       "cc": {
         "major": 2,
         "minor": 0
-      }
-    },
-    {
-      "name": "GeForce 710M",
-      "cc": {
-        "major": 2,
-        "minor": 1
       }
     },
     {
