@@ -7,7 +7,8 @@ class DriverV {
     this.minor = minor
     this.patch = patch
   }
-  fromString(str: string) {
+
+  static fromString(str: string) {
     const parts = str.split(".").map(Number)
     return new DriverV(parts[0], parts[1] || 0, parts[2] || 0)
   }

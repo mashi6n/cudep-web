@@ -11,11 +11,11 @@ import ScrapeGPU from "./scrape-gpu.js"
     const gpus = await ScrapeGPU()
     const ccDeps = await ScrapeCC()
     const cudaDeps = await ScrapeCuda()
-    const dep: DepResolver = {
+    const dep = new DepResolver(
       gpus,
       ccDeps,
       cudaDeps,
-    }
+    )
 
     if (outDirName === null) {
       console.log(JSON.stringify(dep, null, 2))

@@ -1,7 +1,7 @@
 class CompCap {
   major: number
   minor: number
-  fromString(str: string): CompCap {
+  static fromString(str: string): CompCap {
     const parts = str.split(".").map(Number)
     return new CompCap(parts[0], parts[1] || 0)
   }
