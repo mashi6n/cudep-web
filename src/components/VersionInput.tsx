@@ -11,7 +11,7 @@ interface VersionInputProps {
   onChange?: (value: VersionInputValue) => void
 }
 
-export default function VersionInput(
+function VersionInput(
   { defaultValue = { major: 0, minor: 0, patch: 0 }, onChange }: VersionInputProps,
 ) {
   const [version, setVersion] = useState<VersionInputValue>(defaultValue)
@@ -86,3 +86,6 @@ export default function VersionInput(
     </div>
   )
 }
+
+export { VersionInput }
+export type { VersionInputValue }
