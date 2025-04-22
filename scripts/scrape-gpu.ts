@@ -4,6 +4,7 @@ import Gpu from "../src/models/Gpu.js"
 
 async function ScrapeGPU(): Promise<Gpu[]> {
   const gpus: Gpu[] = []
+  const seenGpus = new Set<string>()
 
   const url = "https://developer.nvidia.com/cuda-gpus"
   const dom = await JSDOM.fromURL(url)
@@ -11,7 +12,8 @@ async function ScrapeGPU(): Promise<Gpu[]> {
   const trs = doc.querySelectorAll("tr")
   trs.forEach((tr) => {
     const gpu = parseRow(tr)
-    if (gpu) {
+    if (gpu && !seenGpus.has(gpu.name)) {
+      seenGpus.add(gpu.name)
       gpus.push(gpu)
     }
   })
