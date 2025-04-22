@@ -50,6 +50,10 @@ function parseRow(row: Element): CudaDep | null {
   cuda = (verStr.length > 1) ? String(verStr[1]) : "0.0"
   minLinuxDriver = minLinuxDriver.replace(">=", "").trim()
   minWindowsDriver = minWindowsDriver.replace(">=", "").trim()
-  return new CudaDep(new CudaV(cuda), new DriverV(minLinuxDriver), new DriverV(minWindowsDriver))
+  return new CudaDep(
+    CudaV.fromString(cuda),
+    DriverV.fromString(minLinuxDriver),
+    DriverV.fromString(minWindowsDriver),
+  )
 }
 export default ScrapeCuda

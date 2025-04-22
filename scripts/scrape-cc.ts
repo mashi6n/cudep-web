@@ -45,7 +45,9 @@ function parseRow(row: Element): CompCapDep[] {
     }
     let maxCuda = maxCudas[Math.min(i, maxCudas.length - 1)]
     maxCuda = maxCuda.replace("CUDA", "").replace("x", "999").replace("Ongoing", "999.999").trim()
-    ccDeps.push(new CompCapDep(new CompCap(cc), new CudaV(minCuda), new CudaV(maxCuda)))
+    ccDeps.push(
+      new CompCapDep(CompCap.fromString(cc), CudaV.fromString(minCuda), CudaV.fromString(maxCuda)),
+    )
   }
   return ccDeps
 }

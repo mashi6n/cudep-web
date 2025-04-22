@@ -18,6 +18,7 @@ class DepResolver {
       new CudaDep(dep.cuda, dep.minLinuxDriver, dep.minWindowsDriver)
     )
   }
+
   getCompatibleCudas(gpuName: string, driverV: DriverV): CudaV[] {
     const gpu = this.gpus.find(g => g.name === gpuName)
     if (!gpu) {

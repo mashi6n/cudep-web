@@ -6,6 +6,7 @@ class CudaDep {
   cuda: CudaV
   minLinuxDriver: DriverV
   minWindowsDriver: DriverV
+
   constructor(cuda: CudaV, minLinuxDriver: DriverV, minWindowsDriver: DriverV) {
     this.cuda = new CudaV(cuda.major, cuda.minor)
     this.minLinuxDriver = new DriverV(
@@ -19,6 +20,7 @@ class CudaDep {
       minWindowsDriver.patch,
     )
   }
+
   toString() {
     return `CUDA ${this.cuda.toString()} requires driver >=${this.minLinuxDriver.toString()} (Linux), >=${this.minWindowsDriver.toString()} (Windows)`
   }
