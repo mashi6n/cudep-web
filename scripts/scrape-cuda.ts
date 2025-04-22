@@ -18,8 +18,7 @@ async function ScrapeCuda(): Promise<CudaDep[]> {
 
   const cap = table.querySelector("caption")
   if (
-    !(cap && cap.textContent
-      && cap.textContent.includes("CUDA Toolkit and Corresponding Driver Versions"))
+    !(cap?.textContent?.includes("CUDA Toolkit and Corresponding Driver Versions"))
   ) {
     console.error("Table caption not found or does not match")
     return cudaDeps
@@ -43,7 +42,7 @@ function parseRow(row: Element): CudaDep | null {
   if (cuda === "") {
     return null
   }
-  const verStr = cuda.match(/CUDA\s+(\d+\.\d+)/)
+  const verStr = /CUDA\s+(\d+\.\d+)/.exec(cuda)
   if (!verStr) {
     return null
   }

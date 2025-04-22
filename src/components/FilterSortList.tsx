@@ -45,7 +45,9 @@ export default function FilterSortList({ items, onSelect }: FilterSortListProps)
         className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring focus:border-blue-300"
         placeholder="Search..."
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={(e) => {
+          setQuery(e.target.value)
+        }}
       />
 
       <ul className="space-y-2">
@@ -55,7 +57,9 @@ export default function FilterSortList({ items, onSelect }: FilterSortListProps)
             className={`p-2 border rounded cursor-pointer ${
               selected === item ? "border-blue-300 bg-indigo-600" : ""
             }`}
-            onClick={() => handleSelect(item)}
+            onClick={() => {
+              handleSelect(item)
+            }}
           >
             {item}
           </li>
