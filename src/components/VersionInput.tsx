@@ -19,7 +19,6 @@ function VersionInput(
   const minorRef = useRef<HTMLInputElement>(null)
   const patchRef = useRef<HTMLInputElement>(null)
 
-  // onChange 呼び出し
   useEffect(() => {
     onChange?.(version)
   }, [version, onChange])

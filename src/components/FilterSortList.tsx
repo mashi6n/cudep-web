@@ -25,7 +25,6 @@ export default function FilterSortList({ items, onSelect }: FilterSortListProps)
     matches.sort((a, b) => a.index - b.index)
 
     const _sortedItems = [...matches.map((m) => m.item), ...nonMatches]
-    console.log("Sorted Items:", _sortedItems)
     return _sortedItems
   }, [items, query])
 
