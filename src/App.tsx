@@ -1,35 +1,40 @@
-import viteLogo from "/vite.svg"
 import { useState } from "react"
-import reactLogo from "./assets/react.svg"
+import { useEffect } from "react"
 import "./App.css"
+import DepResolver from "./models/DepResolver"
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [dep, setDep] = useState<DepResolver | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    fetchDep()
+      .then((data) => {
+        setLoading(false)
+        setDep(data)
+      })
+      .catch((error) => {
+        console.error("Error fetching dependency data:", error)
+        setLoading(false)
+      })
+  }, [])
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {loading ? <p>Loading...</p> : <p>{dep ? JSON.stringify(dep) : "No data available"}</p>}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
+}
+
+async function fetchDep(): Promise<DepResolver> {
+  const response = await fetch("dependency.json")
+  if (!response.ok) {
+    throw new Error("Network response was not ok")
+  }
+  const dep: DepResolver = await response.json()
+  return dep
 }
 
 export default App
