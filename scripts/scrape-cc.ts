@@ -23,9 +23,7 @@ async function ScrapeCC(): Promise<CompCapDep[]> {
   const rows = table.querySelectorAll("tbody tr")
   rows.forEach((row) => {
     const ccDepsRow = parseRow(row)
-    ccDepsRow.forEach((ccDep) => {
-      ccDeps.push(ccDep)
-    })
+    ccDeps.push(...ccDepsRow)
   })
   return ccDeps
 }
