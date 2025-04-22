@@ -5,25 +5,25 @@ on:
       - main
 
 jobs:
-    lint:
-        runs-on: ubuntu-latest
-        timeout-minutes: 5
-        strategy:
-            matrix:
-                node-version: ['23.x']
-        steps:
-        - uses: actions/checkout@v3
-        - uses: actions/setup-node@v4
-          with:
-            node-version: ${{ matrix.node-version }}
-        - uses: pnpm/action-setup@v4
-          with:
-            version: 10
-        - name: install dependencies
-          run: pnpm i --frozen-lockfile
-        - name: Check format
-          run: pnpm fmt:check
-        - name: Lint
-          run: pnpm lint
-        - name: Check typescript
-          run: pnpm tsc:check
+  lint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      matrix:
+        node-version: ["23.x"]
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: install dependencies
+        run: pnpm i --frozen-lockfile
+      - name: Check format
+        run: pnpm fmt:check
+      - name: Lint
+        run: pnpm lint
+      - name: Check typescript
+        run: pnpm tsc:check
