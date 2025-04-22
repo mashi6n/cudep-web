@@ -1,25 +1,32 @@
-name: Deploy to gh-pages
+name: Deploy GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
   schedule:
     - cron: "0 0 * * *" # every day at midnight
   workflow_dispatch:
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: ["23.x"]
-    permissions:
-      contents: write
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
@@ -28,17 +35,20 @@ jobs:
           version: 10
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
-      - name: Run json update script
-        run: pnpm gen
-      - name: Run vite build
-        run: pnpm build
+      - name: Build
+        run: pnpm gen && pnpm build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .
-          git commit -m "Update json and build." || echo "No changes to commit"
-
-      - name: Push to gh-pages branch
-        run: git push origin HEAD:gh-pages
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
