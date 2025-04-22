@@ -11,7 +11,7 @@
     "fmt:check": "dprint check",
     "tsc:check": "tsc --noEmit",
     "preview": "vite preview",
-    "gen": "tsc -p tsconfig.scripts.json && node .build/dist/scripts/exportJson.js public/ && pnpm fmt",
+    "gen": "tsc -p tsconfig.scripts.json && node .build/dist/scripts/export-json.js public/ && pnpm fmt",
     "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
