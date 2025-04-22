@@ -2,6 +2,7 @@ import { useCallback, useMemo, useState } from "react"
 import { useEffect } from "react"
 import "./App.css"
 import FilterSortList from "./components/FilterSortList"
+import HighlightSortList from "./components/HighlightSortList"
 import { VersionInput, VersionInputValue } from "./components/VersionInput"
 import DepResolver from "./models/DepResolver"
 import DriverV from "./models/DriverV"
@@ -26,9 +27,7 @@ function App() {
   }, [])
 
   const compatibleCudas = useMemo(() => {
-    return dep
-      .getCompatibleCudas(gpuName, driverVersion)
-      .map(i => i.toString())
+    return dep.getCompatibleCudas(gpuName, driverVersion)
   }, [gpuName, driverVersion, dep])
 
   const handleGpuSelect = useCallback((item: string | null) => {
@@ -44,18 +43,10 @@ function App() {
       <div className="grid md:grid-cols-3 gap-4 p-4">
         <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} onSelect={handleGpuSelect} />
         <VersionInput onChange={handleVersionChange} />
-        <div className="p-4 max-w-md mx-auto">
-          <ul className="space-y-2 ">
-            {compatibleCudas.map((item) => (
-              <li
-                key={item.toString()}
-                className={`p-2 border rounded`}
-              >
-                {item.toString()}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <HighlightSortList
+          allItems={dep.cudaDeps.map((c) => c.cuda)}
+          highlightItems={compatibleCudas}
+        />
       </div>
     </>
   )
