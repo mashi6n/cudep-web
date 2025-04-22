@@ -45,7 +45,7 @@ function App() {
             {compatibleCudas.map((item) => (
               <li
                 key={item.toString()}
-                className={`p-2 border rounded cursor-pointer`}
+                className={`p-2 border rounded`}
               >
                 {item.toString()}
               </li>
