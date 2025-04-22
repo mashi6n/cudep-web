@@ -6,7 +6,13 @@
     "outDir": ".build/dist", // where to put compiled JS
     "rootDir": ".", // so it finds scripts/
     "esModuleInterop": true,
-    "moduleResolution": "NodeNext"
+    "moduleResolution": "NodeNext",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true
   },
   "include": ["scripts/**/*.ts"]
 }
