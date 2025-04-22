@@ -11,8 +11,8 @@
     "fmt:check": "dprint check",
     "tsc:check": "tsc --noEmit",
     "preview": "vite preview",
-    "build:scripts": "tsc -p tsconfig.scripts.json",
-    "run:scrape": "npm run build:scripts && node dist/scripts/exportJson.js public/"
+    "gen": "tsc -p tsconfig.scripts.json && node dist/scripts/exportJson.js public/ && pnpm fmt",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@types/jsdom": "^21.1.7",
