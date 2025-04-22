@@ -59,7 +59,7 @@ export default function VersionInput(
         onKeyDown={(e) => handleKeyDown(e, minorRef)}
         placeholder="0"
       />
-      <span className="select-none">.</span>
+      <span className="select-none font-bold">.</span>
       <input
         ref={minorRef}
         type="text"
@@ -71,7 +71,7 @@ export default function VersionInput(
         onKeyDown={(e) => handleKeyDown(e, patchRef)}
         placeholder="0"
       />
-      <span className="select-none">.</span>
+      <span className="select-none font-bold">.</span>
       <input
         ref={patchRef}
         type="text"
