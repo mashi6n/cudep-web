@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { useEffect } from "react"
 import "./App.css"
+import FilterSortList from "./components/FilterSortList"
 import DepResolver from "./models/DepResolver"
 
 function App() {
-  const [dep, setDep] = useState<DepResolver | null>(null)
+  const [dep, setDep] = useState<DepResolver>(new DepResolver([], [], []))
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -22,7 +23,7 @@ function App() {
   return (
     <>
       <div>
-        {loading ? <p>Loading...</p> : <p>{dep ? JSON.stringify(dep) : "No data available"}</p>}
+        {loading ? <p>Loading...</p> : <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} />}
       </div>
     </>
   )
@@ -34,6 +35,7 @@ async function fetchDep(): Promise<DepResolver> {
     throw new Error("Network response was not ok")
   }
   const dep: DepResolver = await response.json()
+  console.log("Fetched dependency data:", dep)
   return dep
 }
 
