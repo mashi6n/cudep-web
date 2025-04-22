@@ -10,13 +10,13 @@ async function ScrapeCC(): Promise<CompCapDep[]> {
   const dom = await JSDOM.fromURL(url)
   const doc = dom.window.document
   const table = doc.getElementById("cuda-and-architecture-matrix-table")
-  if (!table) {
+  if (table === null) {
     console.error("Table not found")
     return ccDeps
   }
 
   const cap = table.querySelector("caption")
-  if (!(cap && cap.textContent && cap.textContent.includes("CUDA and Architecture Matrix"))) {
+  if (!(cap?.textContent?.includes("CUDA and Architecture Matrix"))) {
     console.error("Table caption not found or does not match")
     return ccDeps
   }

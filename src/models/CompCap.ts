@@ -10,7 +10,7 @@ class CompCap {
     this.minor = minor
   }
   toString() {
-    return `${this.major}.${this.minor}`
+    return `${this.major.toString()}.${this.minor.toString()}`
   }
 }
 

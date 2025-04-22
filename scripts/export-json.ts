@@ -29,4 +29,7 @@ import ScrapeGPU from "./scrape-gpu.js"
     console.error("Error scraping GPUs:", err)
     process.exit(1)
   }
-})()
+})().catch((err: unknown) => {
+  console.error("Error:", err)
+  process.exit(1)
+})

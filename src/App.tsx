@@ -16,8 +16,12 @@ function App() {
       .then((data) => {
         setDep(data)
       })
-      .catch((error) => {
-        console.error("Error fetching dependency data:", error)
+      .catch((error: unknown) => {
+        if (error instanceof Error) {
+          console.error("Error fetching dependency data:", error.message)
+        } else {
+          console.error("Error fetching dependency data:", error)
+        }
       })
   }, [])
 
@@ -60,9 +64,10 @@ function App() {
 async function fetchDep(): Promise<DepResolver> {
   const response = await fetch("dependency.json")
   if (!response.ok) {
-    throw new Error("Network response was not ok")
+    console.error("Failed to fetch dependency data:", response.statusText)
+    return new DepResolver([], [], [])
   }
-  const data = await response.json()
+  const data = await response.json() as DepResolver
   const dep: DepResolver = new DepResolver(
     data.gpus,
     data.ccDeps,

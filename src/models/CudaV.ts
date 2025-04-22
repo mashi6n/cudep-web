@@ -13,7 +13,7 @@ class CudaV {
   }
 
   toString() {
-    return `${this.major}.${this.minor}`
+    return `${this.major.toString()}.${this.minor.toString()}`
   }
 
   isLessThanOrEqualTo(other: CudaV): boolean {

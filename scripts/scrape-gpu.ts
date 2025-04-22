@@ -26,7 +26,7 @@ function parseRow(row: Element): Gpu | null {
     return null
   }
   const gpuName = cells[0].textContent?.trim() ?? ""
-  const cc = cells[1].textContent?.trim() ?? ""
+  const cc: string = cells[1].textContent?.trim() ?? ""
   return new Gpu(gpuName.trim(), CompCap.fromString(cc))
 }
 export default ScrapeGPU
