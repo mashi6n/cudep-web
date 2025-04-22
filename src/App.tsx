@@ -19,11 +19,16 @@ function App() {
         setLoading(false)
       })
   }, [])
+  const handleSelect = (item: string | null) => {
+    console.log("選択された項目:", item)
+  }
 
   return (
     <>
       <div>
-        {loading ? <p>Loading...</p> : <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} />}
+        {loading
+          ? <p>Loading...</p>
+          : <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} onSelect={handleSelect} />}
       </div>
     </>
   )
