@@ -7,9 +7,9 @@ class CompCapDep {
   minSupportedCuda: CudaV
   maxSupportedCuda: CudaV
   constructor(cc: CompCap, min: CudaV, max: CudaV) {
-    this.cc = cc
-    this.minSupportedCuda = min
-    this.maxSupportedCuda = max
+    this.cc = new CompCap(cc.major, cc.minor)
+    this.minSupportedCuda = new CudaV(min.major, min.minor)
+    this.maxSupportedCuda = new CudaV(max.major, max.minor)
   }
   toString() {
     return `Compute Capability ${this.cc.toString()} is supported by CUDA >=${this.minSupportedCuda.toString()}, <=${this.maxSupportedCuda.toString()}`
