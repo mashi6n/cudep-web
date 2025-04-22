@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# CuDep: A Simple Dependency Resolver for CUDA and its buddies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+cudep-web is a simple web application that helps you resolve dependencies for CUDA and its buddies -- GPUs, drivers, libraries, etc.
 
-Currently, two official plugins are available:
+[Try it now! 🚀](https://mashi6n.github.io/cudep-web/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+### Discover the right CUDA versions for your GPU and NVIDIA Driver
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Enter your GPU model and the NVIDIA driver version, and CuDep will tell you the compatible CUDA versions.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## To Do
+
+- Add availability list for CUDA related:
+  - [ ] libraries (e.g. torch, flash-attn, etc.)
+  - [ ] docker containers (e.g. nvidia/cuda, pytorch/pytorch, etc.)
+- [ ] Add new feature which allows you to select CUDA, PyTorch version and get the compatible GPU and NVIDIA driver.
+- [ ] Add ubuntu version compatibility for NVIDIA Driver.
+- [ ] Add copy to clipboard button for the output (CUDA, docker image name, etc.).
+- [ ] Add a rich search feature for the GPU list. (It should show `A100`, `A10`, `A16`, `AXX`, ... for query `A100`)
+- [ ] Support shared link.
+- Brush up the UI.
+  - [ ] Restrict GPU list length to show.
+  - [ ] Add mouse hover effect for the GPU list.
+  - [ ] Add mouse hover effect for the CUDA version list. (Show popup with related information like docker image name, library compatibility, etc.)
+  - [ ] Change how CUDA list displayed. e.g. 2D list.
+- [ ] SEO optimization.
+
+# For Developers
+
+## Prerequisites
+
+- Node.js (v23.5.0 or later)
+- pnpm (10.9.0 or later)
+
+## Installation
+
+1. Install dependencies:
+
+```bash
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2. Fetch dependency data for CUDA. Following command will export json data to `public/dependency.json`.
 
-```js
-// eslint.config.js
-import reactDom from "eslint-plugin-react-dom"
-import reactX from "eslint-plugin-react-x"
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    "react-x": reactX,
-    "react-dom": reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs["recommended-typescript"].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+pnpm gen
 ```
+
+3. Start the development server:
+
+```bash
+pnpm dev
+```
+
+4. Open your browser and navigate to which is shown in the terminal (usually `http://localhost:5173`).
+
+Please see `package.json` for more commands.
+
+## Format, Lint and Type Check
+
+```bash
+pnpm fmt
+pnpm lint
+pnpm tsc:check
+```
+
+## Contributing
+
+Contributions are **super** welcome! Please feel free to submit a pull request or open an issue if you have any suggestions or improvements.
