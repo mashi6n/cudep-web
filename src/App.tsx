@@ -40,7 +40,7 @@ function App() {
 
   return (
     <>
-      <div className="grid md:grid-cols-3 gap-4 p-4">
+      <div className="grid md:grid-cols-3 p-4 h-full">
         <FilterSortList
           title="GPU"
           items={dep.gpus.map((gpu) => gpu.name)}

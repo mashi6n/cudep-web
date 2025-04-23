@@ -40,13 +40,13 @@ export default function FilterSortList({ title, items, onSelect }: FilterSortLis
   }
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <div className="p-4 text-lg font-semibold">
+    <div className="p-4 max-w-md mx-auto flex flex-col h-full min-h-0">
+      <div className="p-4 text-lg font-semibold flex-none">
         {title}
       </div>
       <input
         type="text"
-        className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring focus:border-blue-300"
+        className="w-full p-2 mb-4 border rounded flex-none focus:outline-none focus:ring focus:border-blue-300"
         placeholder="Search..."
         value={query}
         onChange={(e) => {
@@ -54,7 +54,7 @@ export default function FilterSortList({ title, items, onSelect }: FilterSortLis
         }}
       />
 
-      <ul className="space-y-2">
+      <ul className="space-y-2 flex-1 overflow-y-auto min-h-0">
         {sortedItems.map((item) => (
           <li
             key={item}

@@ -4,6 +4,10 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+  height: 100dvh;
+  max-height: 100dvh;
+  overflow: hidden;
 }
 
 .logo {

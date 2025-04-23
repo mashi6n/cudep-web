@@ -14,11 +14,11 @@ export default function HighlightSortList(
   const allSorteditems = [...allItems].sort((a, b) => b.isLessThanOrEqualTo(a) ? -1 : 1)
 
   return (
-    <div className="p-4 max-w-md mx-auto">
-      <div className="p-4 text-lg font-semibold">
+    <div className="p-4 max-w-md mx-auto flex flex-col h-full min-h-0">
+      <div className="p-4 text-lg font-semibold flex-none">
         {title}
       </div>
-      <ul className="space-y-2 ">
+      <ul className="space-y-2 flex-1 overflow-y-auto min-h-0">
         {highlightSortedItems.map((item) => (
           <li
             key={item.toString()}
