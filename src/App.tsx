@@ -40,10 +40,15 @@ function App() {
 
   return (
     <>
-      <div className="grid md:grid-cols-3 gap-4 p-4">
-        <FilterSortList items={dep.gpus.map((gpu) => gpu.name)} onSelect={handleGpuSelect} />
-        <VersionInput onChange={handleVersionChange} />
+      <div className="grid md:grid-cols-3 p-4 h-full">
+        <FilterSortList
+          title="GPU"
+          items={dep.gpus.map((gpu) => gpu.name)}
+          onSelect={handleGpuSelect}
+        />
+        <VersionInput title="Driver Version" onChange={handleVersionChange} />
         <HighlightSortList
+          title="Compatible CUDA"
           allItems={dep.cudaDeps.map((c) => c.cuda)}
           highlightItems={compatibleCudas}
         />
