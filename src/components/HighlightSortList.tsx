@@ -22,7 +22,7 @@ export default function HighlightSortList(
         {highlightSortedItems.map((item) => (
           <li
             key={item.toString()}
-            className={`p-2 border rounded`}
+            className={`p-2 border rounded border-indigo-300 font-bold`}
           >
             {item.toString()}
           </li>
