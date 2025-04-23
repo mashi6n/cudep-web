@@ -59,7 +59,7 @@ export default function FilterSortList({ title, items, onSelect }: FilterSortLis
           <li
             key={item}
             className={`p-3 cursor-pointer hover:brightness-120 ${
-              selected === item ? "border-indigo-300 bg-indigo-900" : ""
+              selected === item ? "border-indigo-300 bg-indigo-950" : ""
             }`}
             onClick={() => {
               handleSelect(item)
