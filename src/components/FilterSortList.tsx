@@ -46,7 +46,7 @@ export default function FilterSortList({ title, items, onSelect }: FilterSortLis
       </div>
       <input
         type="text"
-        className="w-full p-2 mb-4 border rounded flex-none focus:outline-none focus:ring focus:border-blue-300"
+        className="w-full p-2 mb-4 border-b flex-none focus:outline-none focus:ring-0 focus:border-b-indigo-300"
         placeholder="Search..."
         value={query}
         onChange={(e) => {
@@ -54,12 +54,12 @@ export default function FilterSortList({ title, items, onSelect }: FilterSortLis
         }}
       />
 
-      <ul className="space-y-2 flex-1 overflow-y-auto min-h-0">
+      <ul className="rounded border divide-y divide-gray-500 flex-1 overflow-y-auto min-h-0">
         {sortedItems.map((item) => (
           <li
             key={item}
-            className={`p-2 border rounded cursor-pointer hover:bg-gray-900 ${
-              selected === item ? "border-purple-300 bg-gray-900" : ""
+            className={`p-3 cursor-pointer hover:brightness-120 ${
+              selected === item ? "border-indigo-300 bg-indigo-900" : ""
             }`}
             onClick={() => {
               handleSelect(item)
