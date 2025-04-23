@@ -1,17 +1,23 @@
 import CudaV from "../models/CudaV"
 type T = CudaV
 interface HighlightSortListProps {
+  title: string
   allItems: T[]
   highlightItems: T[]
 }
 
-export default function HighlightSortList({ allItems, highlightItems }: HighlightSortListProps) {
+export default function HighlightSortList(
+  { title, allItems, highlightItems }: HighlightSortListProps,
+) {
   const highlightSet = new Set(highlightItems)
   const highlightSortedItems = [...highlightItems].sort((a, b) => b.isLessThanOrEqualTo(a) ? -1 : 1)
   const allSorteditems = [...allItems].sort((a, b) => b.isLessThanOrEqualTo(a) ? -1 : 1)
 
   return (
     <div className="p-4 max-w-md mx-auto">
+      <div className="p-4 text-lg font-semibold">
+        {title}
+      </div>
       <ul className="space-y-2 ">
         {highlightSortedItems.map((item) => (
           <li

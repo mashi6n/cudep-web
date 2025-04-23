@@ -1,11 +1,12 @@
 import { useMemo, useState } from "react"
 
 interface FilterSortListProps {
+  title: string
   items: string[]
   onSelect?: (item: string | null) => void
 }
 
-export default function FilterSortList({ items, onSelect }: FilterSortListProps) {
+export default function FilterSortList({ title, items, onSelect }: FilterSortListProps) {
   const [query, setQuery] = useState("")
   const [selected, setSelected] = useState<string | null>(null)
   const sortedItems = useMemo(() => {
@@ -40,6 +41,9 @@ export default function FilterSortList({ items, onSelect }: FilterSortListProps)
 
   return (
     <div className="p-4 max-w-md mx-auto">
+      <div className="p-4 text-lg font-semibold">
+        {title}
+      </div>
       <input
         type="text"
         className="w-full p-2 mb-4 border rounded focus:outline-none focus:ring focus:border-blue-300"
@@ -54,8 +58,8 @@ export default function FilterSortList({ items, onSelect }: FilterSortListProps)
         {sortedItems.map((item) => (
           <li
             key={item}
-            className={`p-2 border rounded cursor-pointer ${
-              selected === item ? "border-blue-300 bg-indigo-600" : ""
+            className={`p-2 border rounded cursor-pointer hover:bg-gray-900 ${
+              selected === item ? "border-purple-300 bg-gray-900" : ""
             }`}
             onClick={() => {
               handleSelect(item)

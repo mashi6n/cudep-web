@@ -7,12 +7,13 @@ interface VersionInputValue {
 }
 
 interface VersionInputProps {
+  title: string
   defaultValue?: VersionInputValue
   onChange?: (value: VersionInputValue) => void
 }
 
 function VersionInput(
-  { defaultValue, onChange }: VersionInputProps,
+  { title, defaultValue, onChange }: VersionInputProps,
 ) {
   const [version, setVersion] = useState<VersionInputValue>(
     defaultValue ?? { major: 0, minor: 0, patch: 0 } as VersionInputValue,
@@ -49,6 +50,9 @@ function VersionInput(
 
   return (
     <div className="p-4 max-w-md mx-auto">
+      <div className="p-4 text-lg font-semibold">
+        {title}
+      </div>
       <input
         ref={majorRef}
         type="text"
