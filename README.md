@@ -21,10 +21,10 @@ cudep-web is a simple web application that helps you resolve dependencies for CU
 - [ ] Add a rich search feature for the GPU list. (It should show `A100`, `A10`, `A16`, `AXX`, ... for query `A100`)
 - [ ] Support shared link.
 - Brush up the UI.
-  - [ ] Restrict GPU list length to show.
-  - [ ] Add mouse hover effect for the GPU list.
+  - [x] Restrict GPU list length to show.
+  - [x] Add mouse hover effect for the GPU list.
   - [ ] Add mouse hover effect for the CUDA version list. (Show popup with related information like docker image name, library compatibility, etc.)
-  - [ ] Change how CUDA list displayed. e.g. 2D list.
+  - [x] Change how CUDA list displayed. e.g. 2D list.
 - [ ] SEO optimization.
 
 # For Developers
