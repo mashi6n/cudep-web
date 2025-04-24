@@ -12,9 +12,7 @@ cudep-web is a simple web application that helps you resolve dependencies for CU
 
 ## To Do
 
-- Add availability list for CUDA related:
-  - [ ] libraries (e.g. torch, flash-attn, etc.)
-  - [ ] docker containers (e.g. nvidia/cuda, pytorch/pytorch, etc.)
+- [ ] Add available versions of CUDA related library (e.g. torch, flash-attn, etc.) and docker image (e.g. nvidia/cuda, pytorch/pytorch, etc.).
 - [ ] Add new feature which allows you to select CUDA, PyTorch version and get the compatible GPU and NVIDIA driver.
 - [ ] Add ubuntu version compatibility for NVIDIA Driver.
 - [ ] Add copy to clipboard button for the output (CUDA, docker image name, etc.).
@@ -26,6 +24,8 @@ cudep-web is a simple web application that helps you resolve dependencies for CU
   - [ ] Add mouse hover effect for the CUDA version list. (Show popup with related information like docker image name, library compatibility, etc.)
   - [x] Change how CUDA list displayed. e.g. 2D list.
 - [ ] SEO optimization.
+- [ ] Add documents for version resolution logic and evidence.
+- [ ] Support for vertical screens such as smartphones.
 
 # For Developers
 
