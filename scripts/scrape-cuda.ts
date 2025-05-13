@@ -10,7 +10,7 @@ async function ScrapeCuda(): Promise<CudaDep[]> {
   const url = "https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html"
   const dom = await JSDOM.fromURL(url)
   const doc = dom.window.document
-  const table = doc.getElementById("id6")
+  const table = doc.getElementById("id7")
   if (!table) {
     console.error("Table not found")
     return cudaDeps
