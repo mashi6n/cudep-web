@@ -66,7 +66,7 @@ function parseRow(row: Element, getText: (elm: Element) => string): Gpu[] {
 
   const cc = cells[0].textContent?.trim() ?? ""
 
-  const gpuNamesText = getText(cells[1]) + " " + getText(cells[2]) + getText(cells[3])
+  const gpuNamesText = (getText(cells[1]) + getText(cells[2]) + getText(cells[3])).trim()
   if (gpuNamesText === "") {
     console.error("GPU name not found")
     return []
