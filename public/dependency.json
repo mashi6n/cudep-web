@@ -1,51 +1,51 @@
 {
   "gpus": [
     {
-      "name": "Tesla K80",
+      "name": "GeForce RTX 5090",
       "cc": {
-        "major": 3,
-        "minor": 7
-      }
-    },
-    {
-      "name": "Tesla K40",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Tesla K20",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Tesla C2075",
-      "cc": {
-        "major": 2,
+        "major": 12,
         "minor": 0
       }
     },
     {
-      "name": "Tesla C2050/C2070",
+      "name": "GeForce RTX 5080",
       "cc": {
-        "major": 2,
+        "major": 12,
         "minor": 0
       }
     },
     {
-      "name": "NVIDIA Blackwell GPU (GB200)",
+      "name": "GeForce RTX 5070 Ti",
+      "cc": {
+        "major": 12,
+        "minor": 0
+      }
+    },
+    {
+      "name": "GeForce RTX 5070",
+      "cc": {
+        "major": 12,
+        "minor": 0
+      }
+    },
+    {
+      "name": "NVIDIA GB200",
       "cc": {
         "major": 10,
         "minor": 0
       }
     },
     {
-      "name": "NVIDIA Blackwell GPU (B200)",
+      "name": "NVIDIA B200",
       "cc": {
         "major": 10,
+        "minor": 0
+      }
+    },
+    {
+      "name": "NVIDIA GH200",
+      "cc": {
+        "major": 9,
         "minor": 0
       }
     },
@@ -71,13 +71,6 @@
       }
     },
     {
-      "name": "NVIDIA L40S",
-      "cc": {
-        "major": 8,
-        "minor": 9
-      }
-    },
-    {
       "name": "NVIDIA L40",
       "cc": {
         "major": 8,
@@ -85,731 +78,45 @@
       }
     },
     {
-      "name": "NVIDIA A100",
-      "cc": {
-        "major": 8,
-        "minor": 0
-      }
-    },
-    {
-      "name": "NVIDIA A40",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "NVIDIA A30",
-      "cc": {
-        "major": 8,
-        "minor": 0
-      }
-    },
-    {
-      "name": "NVIDIA A10",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "NVIDIA A16",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "NVIDIA A2",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "NVIDIA T4",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "NVIDIA V100",
-      "cc": {
-        "major": 7,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Tesla P100",
-      "cc": {
-        "major": 6,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Tesla P40",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Tesla P4",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Tesla M60",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Tesla M40",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Tesla K10",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "RTX 6000",
+      "name": "RTX 6000 Ada",
       "cc": {
         "major": 8,
         "minor": 9
       }
     },
     {
-      "name": "RTX A6000",
+      "name": "RTX 5000 Ada",
       "cc": {
         "major": 8,
-        "minor": 6
+        "minor": 9
       }
     },
     {
-      "name": "RTX A5000",
+      "name": "RTX 4500 Ada",
       "cc": {
         "major": 8,
-        "minor": 6
+        "minor": 9
       }
     },
     {
-      "name": "RTX A4000",
+      "name": "RTX 4000 Ada",
       "cc": {
         "major": 8,
-        "minor": 6
+        "minor": 9
       }
     },
     {
-      "name": "T1000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "T600",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "T400",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro RTX 8000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro RTX 6000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro RTX 5000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro RTX 4000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro GV100",
-      "cc": {
-        "major": 7,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro GP100",
-      "cc": {
-        "major": 6,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro P6000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P5000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P4000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P2200",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P2000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P1000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P620",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P600",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P400",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro M6000 24GB",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro M6000",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro K6000",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro M5000",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro K5200",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro K5000",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M4000",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro K4200",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K4000",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M2000",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro K2200",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K2000",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K2000D",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K1200",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K620",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K600",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K420",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro 410",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro Plex 7000",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "RTX A3000",
+      "name": "RTX 4000 SFF Ada",
       "cc": {
         "major": 8,
-        "minor": 6
+        "minor": 9
       }
     },
     {
-      "name": "RTX A2000",
+      "name": "RTX 2000 Ada",
       "cc": {
         "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "RTX 5000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "RTX 4000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "RTX 3000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "T2000",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "T1200",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "T500",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "P620",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "P520",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P5200",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P4200",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P3200",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P3000",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro P500",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Quadro M5500M",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro M2200",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro M1200",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M620",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "Quadro M520",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K6000M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K5200M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K5100M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M5000M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K500M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K4200M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K4100M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M4000M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K3100M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M3000M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K2200M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K2100M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M2000M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K1100M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro M1000M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K620M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K610M",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro M600M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "Quadro K510M",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Quadro M500M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "NVIDIA NVS 810",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "NVIDIA NVS 510",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "NVIDIA NVS 315",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "NVIDIA NVS 310",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "NVS 5400M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "NVS 5200M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "NVS 4200M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce RTX 5090",
-      "cc": {
-        "major": 12,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce RTX 5080",
-      "cc": {
-        "major": 12,
-        "minor": 0
+        "minor": 9
       }
     },
     {
@@ -834,10 +141,115 @@
       }
     },
     {
+      "name": "GeForce RTX 4070",
+      "cc": {
+        "major": 8,
+        "minor": 9
+      }
+    },
+    {
       "name": "GeForce RTX 4060 Ti",
       "cc": {
         "major": 8,
         "minor": 9
+      }
+    },
+    {
+      "name": "GeForce RTX 4060",
+      "cc": {
+        "major": 8,
+        "minor": 9
+      }
+    },
+    {
+      "name": "GeForce RTX 4050",
+      "cc": {
+        "major": 8,
+        "minor": 9
+      }
+    },
+    {
+      "name": "Jetson AGX Orin",
+      "cc": {
+        "major": 8,
+        "minor": 7
+      }
+    },
+    {
+      "name": "Jetson Orin NX",
+      "cc": {
+        "major": 8,
+        "minor": 7
+      }
+    },
+    {
+      "name": "Jetson Orin Nano",
+      "cc": {
+        "major": 8,
+        "minor": 7
+      }
+    },
+    {
+      "name": "NVIDIA A40",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "NVIDIA A10",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "NVIDIA A16",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "NVIDIA A2",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "RTX A6000",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "RTX A5000",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "RTX A4000",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "RTX A3000",
+      "cc": {
+        "major": 8,
+        "minor": 6
+      }
+    },
+    {
+      "name": "RTX A2000",
+      "cc": {
+        "major": 8,
+        "minor": 6
       }
     },
     {
@@ -883,489 +295,6 @@
       }
     },
     {
-      "name": "Geforce RTX 3060 Ti",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "Geforce RTX 3060",
-      "cc": {
-        "major": 8,
-        "minor": 6
-      }
-    },
-    {
-      "name": "GeForce GTX 1650 Ti",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "NVIDIA TITAN RTX",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Geforce RTX 2080 Ti",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Geforce RTX 2080",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Geforce RTX 2070",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "Geforce RTX 2060",
-      "cc": {
-        "major": 7,
-        "minor": 5
-      }
-    },
-    {
-      "name": "NVIDIA TITAN V",
-      "cc": {
-        "major": 7,
-        "minor": 0
-      }
-    },
-    {
-      "name": "NVIDIA TITAN Xp",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "NVIDIA TITAN X",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1080 Ti",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1080",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1070 Ti",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1070",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1060",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 1050",
-      "cc": {
-        "major": 6,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX TITAN X",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX TITAN Z",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GTX TITAN Black",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GTX TITAN",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GTX 980 Ti",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 980",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 970",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 960",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 950",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 780 Ti",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GTX 780",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GTX 770",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 760",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 750 Ti",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 750",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 690",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 680",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 670",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 660 Ti",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 660",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 650 Ti BOOST",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 650 Ti",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 650",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 560 Ti",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 550 Ti",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 460",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTS 450",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTS 450*",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 590",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 580",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 570",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 480",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 470",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 465",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 740",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 730",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GT 730 DDR3,128bit",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 720",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GT 705*",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GT 640 (GDDR5)",
-      "cc": {
-        "major": 3,
-        "minor": 5
-      }
-    },
-    {
-      "name": "GeForce GT 640 (GDDR3)",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 630",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 620",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 610",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 520",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 440",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 440*",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 430",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 430*",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce RTX 4070",
-      "cc": {
-        "major": 8,
-        "minor": 9
-      }
-    },
-    {
-      "name": "GeForce RTX 4060",
-      "cc": {
-        "major": 8,
-        "minor": 9
-      }
-    },
-    {
-      "name": "GeForce RTX 4050",
-      "cc": {
-        "major": 8,
-        "minor": 9
-      }
-    },
-    {
       "name": "GeForce RTX 3060 Ti",
       "cc": {
         "major": 8,
@@ -1394,479 +323,143 @@
       }
     },
     {
-      "name": "GeForce GTX 980M",
+      "name": "NVIDIA A100",
       "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 970M",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 965M",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 960M",
-      "cc": {
-        "major": 5,
+        "major": 8,
         "minor": 0
       }
     },
     {
-      "name": "GeForce GTX 950M",
+      "name": "NVIDIA A30",
       "cc": {
-        "major": 5,
+        "major": 8,
         "minor": 0
       }
     },
     {
-      "name": "GeForce 940M",
+      "name": "NVIDIA T4",
       "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce 930M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce 920M",
-      "cc": {
-        "major": 3,
+        "major": 7,
         "minor": 5
       }
     },
     {
-      "name": "GeForce 910M",
-      "cc": {
-        "major": 5,
-        "minor": 2
-      }
-    },
-    {
-      "name": "GeForce GTX 880M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 870M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 860M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 850M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce 840M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce 830M",
-      "cc": {
-        "major": 5,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce 820M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce 800M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 780M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 770M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 765M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 760M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 680MX",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 680M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 675MX",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 675M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 670MX",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GTX 670M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 660M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 755M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 750M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 650M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 745M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 645M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 740M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 730M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 640M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 640M LE",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 735M",
-      "cc": {
-        "major": 3,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce GT 635M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 630M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 625M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 720M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 620M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce 710M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce 705M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce 610M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 580M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 570M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 560M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 555M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 550M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 540M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 525M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 520MX",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 520M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 485M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 470M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 460M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 445M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 435M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 420M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GT 415M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "GeForce GTX 480M",
-      "cc": {
-        "major": 2,
-        "minor": 0
-      }
-    },
-    {
-      "name": "GeForce 410M",
-      "cc": {
-        "major": 2,
-        "minor": 1
-      }
-    },
-    {
-      "name": "Jetson AGX Orin, Jetson Orin NX, Jetson Orin Nano",
-      "cc": {
-        "major": 8,
-        "minor": 7
-      }
-    },
-    {
-      "name": "Jetson AGX Xavier, Jetson Xavier NX",
+      "name": "T1000",
       "cc": {
         "major": 7,
-        "minor": 2
+        "minor": 5
       }
     },
     {
-      "name": "Jetson TX2",
+      "name": "T600",
       "cc": {
-        "major": 6,
-        "minor": 2
+        "major": 7,
+        "minor": 5
       }
     },
     {
-      "name": "Jetson Nano",
+      "name": "T400",
       "cc": {
-        "major": 5,
-        "minor": 3
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "T2000",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "T1200",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "T500",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "RTX 8000",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "RTX 6000",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "RTX 5000",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "RTX 4000",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "RTX 3000",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "GeForce GTX 1650 Ti",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "NVIDIA TITAN RTX",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "GeForce RTX 2080 Ti",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "GeForce RTX 2080",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "GeForce RTX 2070",
+      "cc": {
+        "major": 7,
+        "minor": 5
+      }
+    },
+    {
+      "name": "GeForce RTX 2060",
+      "cc": {
+        "major": 7,
+        "minor": 5
       }
     }
   ],
@@ -2097,6 +690,22 @@
     }
   ],
   "cudaDeps": [
+    {
+      "cuda": {
+        "major": 12,
+        "minor": 9
+      },
+      "minLinuxDriver": {
+        "major": 575,
+        "minor": 51,
+        "patch": 3
+      },
+      "minWindowsDriver": {
+        "major": 576,
+        "minor": 2,
+        "patch": 0
+      }
+    },
     {
       "cuda": {
         "major": 12,
