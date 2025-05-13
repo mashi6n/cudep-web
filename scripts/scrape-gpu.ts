@@ -40,8 +40,7 @@ async function ScrapeGPU(): Promise<Gpu[]> {
 
   const tableBody = doc.querySelector("#isy0j > tbody")
   if (tableBody === null) {
-    console.error("Table body not found")
-    return gpus
+    throw new Error("Scraping GPU: Table body not found")
   }
 
   const trs = tableBody.querySelectorAll("tr")
@@ -54,6 +53,9 @@ async function ScrapeGPU(): Promise<Gpu[]> {
     }
   })
 
+  if (gpus.length === 0) {
+    throw new Error("Scraping GPU: No data found")
+  }
   return gpus
 }
 

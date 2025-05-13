@@ -12,17 +12,16 @@ async function ScrapeCuda(): Promise<CudaDep[]> {
   const doc = dom.window.document
   const table = doc.getElementById("id7")
   if (!table) {
-    console.error("Table not found")
-    return cudaDeps
+    throw new Error("Scraping Cuda: Table not found")
   }
 
   const cap = table.querySelector("caption")
   if (
     !(cap?.textContent?.includes("CUDA Toolkit and Corresponding Driver Versions"))
   ) {
-    console.error("Table caption not found or does not match")
-    return cudaDeps
+    throw new Error("Scraping Cuda: Table caption not found or does not match")
   }
+
   const rows = table.querySelectorAll("tbody tr")
   rows.forEach((row) => {
     const cudaDep = parseRow(row)
@@ -31,6 +30,10 @@ async function ScrapeCuda(): Promise<CudaDep[]> {
       seenCuda.add(cudaDep.cuda.toString())
     }
   })
+
+  if (cudaDeps.length === 0) {
+    throw new Error("Scraping Cuda: No data found")
+  }
   return cudaDeps
 }
 
