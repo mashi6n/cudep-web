@@ -4,25 +4,25 @@ import CudaV from "../src/models/CudaV.js"
 import DriverV from "../src/models/DriverV.js"
 
 async function ScrapeCuda(): Promise<CudaDep[]> {
+  console.log("Scraping CUDA data...")
   const cudaDeps: CudaDep[] = []
   const seenCuda = new Set<string>()
 
   const url = "https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html"
   const dom = await JSDOM.fromURL(url)
   const doc = dom.window.document
-  const table = doc.getElementById("id6")
+  const table = doc.getElementById("id7")
   if (!table) {
-    console.error("Table not found")
-    return cudaDeps
+    throw new Error("Scraping Cuda: Table not found")
   }
 
   const cap = table.querySelector("caption")
   if (
     !(cap?.textContent?.includes("CUDA Toolkit and Corresponding Driver Versions"))
   ) {
-    console.error("Table caption not found or does not match")
-    return cudaDeps
+    throw new Error("Scraping Cuda: Table caption not found or does not match")
   }
+
   const rows = table.querySelectorAll("tbody tr")
   rows.forEach((row) => {
     const cudaDep = parseRow(row)
@@ -31,6 +31,10 @@ async function ScrapeCuda(): Promise<CudaDep[]> {
       seenCuda.add(cudaDep.cuda.toString())
     }
   })
+
+  if (cudaDeps.length === 0) {
+    throw new Error("Scraping Cuda: No data found")
+  }
   return cudaDeps
 }
 

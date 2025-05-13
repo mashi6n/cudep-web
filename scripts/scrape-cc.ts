@@ -4,6 +4,7 @@ import CompCapDep from "../src/models/CompCapDep.js"
 import CudaV from "../src/models/CudaV.js"
 
 async function ScrapeCC(): Promise<CompCapDep[]> {
+  console.log("Scraping compute capability data...")
   const ccDeps: CompCapDep[] = []
 
   const url = "https://docs.nvidia.com/datacenter/tesla/drivers/index.html"
@@ -11,20 +12,22 @@ async function ScrapeCC(): Promise<CompCapDep[]> {
   const doc = dom.window.document
   const table = doc.getElementById("cuda-and-architecture-matrix-table")
   if (table === null) {
-    console.error("Table not found")
-    return ccDeps
+    throw new Error("Scraping CC: Table not found")
   }
 
   const cap = table.querySelector("caption")
   if (!(cap?.textContent?.includes("CUDA and Architecture Matrix"))) {
-    console.error("Table caption not found or does not match")
-    return ccDeps
+    throw new Error("Scraping CC: Table caption not found or does not match")
   }
   const rows = table.querySelectorAll("tbody tr")
   rows.forEach((row) => {
     const ccDepsRow = parseRow(row)
     ccDeps.push(...ccDepsRow)
   })
+
+  if (ccDeps.length === 0) {
+    throw new Error("Scraping CC: No data found")
+  }
   return ccDeps
 }
 

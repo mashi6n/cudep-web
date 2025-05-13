@@ -12,6 +12,9 @@ class CompCap {
   toString() {
     return `${this.major.toString()}.${this.minor.toString()}`
   }
+  toInt() {
+    return this.major * 100 + this.minor
+  }
 }
 
 export default CompCap
