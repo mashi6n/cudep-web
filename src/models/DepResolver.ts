@@ -26,10 +26,15 @@ class DepResolver {
       return []
     }
     console.log(gpu.toString())
-    const ccDep = this.ccDeps.find(dep => dep.cc.toString() === gpu.cc.toString())
+    let ccDep = this.ccDeps.find(dep => dep.cc.toString() === gpu.cc.toString())
     if (!ccDep) {
+      const ccArr = this.ccDeps.map(dep => dep.cc.toInt()).filter(cc => (cc <= gpu.cc.toInt()))
+      const maxIndex = ccArr.indexOf(Math.max(...ccArr))
+      console.log("ccArr", ccArr)
+      console.log("maxIndex", maxIndex)
+      ccDep = this.ccDeps[maxIndex]
       console.warn(`Compute Capability ${gpu.cc.toString()} not found`)
-      return []
+      console.warn(`Using Compute Capability ${ccDep.cc.toString()} instead`)
     }
     console.log(ccDep.toString())
     let compatibleCudaDeps = this.cudaDeps.filter(dep =>
