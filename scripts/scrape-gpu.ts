@@ -3,6 +3,7 @@ import CompCap from "../src/models/CompCap.js"
 import Gpu from "../src/models/Gpu.js"
 
 async function ScrapeGPU(): Promise<Gpu[]> {
+  console.log("Scraping GPU data...")
   const gpus: Gpu[] = []
   const seenGpus = new Set<string>()
 

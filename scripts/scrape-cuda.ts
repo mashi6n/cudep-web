@@ -4,6 +4,7 @@ import CudaV from "../src/models/CudaV.js"
 import DriverV from "../src/models/DriverV.js"
 
 async function ScrapeCuda(): Promise<CudaDep[]> {
+  console.log("Scraping CUDA data...")
   const cudaDeps: CudaDep[] = []
   const seenCuda = new Set<string>()
 

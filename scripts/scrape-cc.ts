@@ -4,6 +4,7 @@ import CompCapDep from "../src/models/CompCapDep.js"
 import CudaV from "../src/models/CudaV.js"
 
 async function ScrapeCC(): Promise<CompCapDep[]> {
+  console.log("Scraping compute capability data...")
   const ccDeps: CompCapDep[] = []
 
   const url = "https://docs.nvidia.com/datacenter/tesla/drivers/index.html"
